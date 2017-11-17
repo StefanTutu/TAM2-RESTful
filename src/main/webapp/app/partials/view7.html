@@ -1,0 +1,50 @@
+<div data-ng-controller="view7Controller">
+<div id="containerF">
+    		<div id="header">
+    			<p>Future release selected: {{futureReleasesSelected[0].releaseId}}</p>
+    		</div>
+   
+   				<table style="width:500px;" cellpadding="1" cellspacing="1" align="left">
+   				
+   					<tr>
+    						<td align="left"><label for="releaseIdV7" >Future release no.:</label></td>
+					    	<td align="left"><input id="releaseIdV7" type="number" 
+					    		ng-model="futureReleasesSelected[0].releaseId" style="width: 100%;"/></td>
+    					</tr>
+    						
+    					<tr>
+							<td  align="left"><label for="estimatedDateV7">Estimated release date:</label></td>
+					    	<td  align="left"><input id="estimatedDateV7" type="text" 
+					    		ng-model="futureReleasesSelected[0].estimatedDate" style="width: 100%;"/></td> 					
+    					</tr>
+    						
+    					<tr> 
+							<td  align="left"><label for="releaseDateV1" align="left">Release type:</label></td>
+							<td  align="left"><input id="releaseDateV1" type="text" 
+					    		ng-model="futureReleasesSelected[0].type" style="width: 100%;"/></td>   
+				
+    					</tr>
+    				
+   					<tr> 
+   						<td  align="left"><a href="{{fRelease.link.href}}" target="_blank"  style="width: 100%;color:red;">Database link to future release</a></td>
+   						<td  align="left">
+   							<button data-ng-click="save();go('/view5')" onClick=reload();  style="width: 100%; color:red;" >Save</button>
+   							<button data-ng-click="go('/view5');" onClick=reload(); style="width: 100%; color:red;">Back to release</button>
+   						</td>  
+   					</tr>
+   					
+					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					
+   					<tr>
+   						<td colspan="2">
+   							<div id="listDiv" class="gridFeaturesStyle" ng-grid="gridFutureReleasesDetail" style="width:800px;"></div>
+   						</td>
+   					</tr>
+   					
+				 </table>
+    	</div>
+</div>

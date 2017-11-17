@@ -1,0 +1,58 @@
+<div data-ng-controller="view10Controller">
+<div id="containerF">
+    		<div id="header">
+    			<p>Patch selected: {{updatesSelected[0].patchId}}</p>
+    		</div>
+   
+   				<table style="width:500px;" cellpadding="1" cellspacing="1" align="left">
+   				
+   					<tr>
+    						<td align="left"><label for="patchId" >Patch Id:</label></td>
+					    	<td align="left"><input id="patchId" type="number" 
+					    		ng-model="updatesSelected[0].patchId" style="width: 100%;"/></td>
+    					</tr>
+    						
+    					<tr>
+							<td  align="left"><label for="patchNotes">Patch notes:</label></td>
+					    	<td  align="left"><input id="patchNotes" type="text" 
+					    		ng-model="updatesSelected[0].patchNotes" style="width: 100%;"/></td> 					
+    					</tr>
+    						
+    					
+    					<tr> 
+							<td  align="left"><label for=patchVersion align="left">Version:</label></td>
+					    	<td  align="left"><input id="patchVersion" type="text" 
+					    		ng-model="updatesSelected[0].patchVersion" style="width: 100%;"/></td>   					
+    					</tr>
+    					
+    					<tr> 
+							<td  align="left"><label for=patchDate align="left">Patch date:</label></td>
+					    	<td  align="left"><input id="patchDate" type="date" 
+					    		ng-model="updatesSelected[0].patchDate" style="width: 100%;"/></td>   					
+    					</tr>
+   					
+   					
+   					
+   					<tr> 
+   						<td  align="left"><a href="{{patch.link.href}}" target="_blank"  style="width: 100%;color:red;">Database link to patch</a></td>
+   						<td  align="left">
+   							<button data-ng-click="save();go('/view8')"  style="width: 100%; color:red;" >Save</button>
+   							<button data-ng-click="go('/view8');" onClick=reload();  style="width: 100%; color:red;">Back to patches</button>
+   						</td>  
+   					</tr>
+   					
+					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					
+   					<tr>
+   						<td colspan="2">
+   							<div id="listDiv" class="gridFeaturesStyle" ng-grid="detailUpdate" style="width:800px;"></div>
+   						</td>
+   					</tr>
+   					
+				 </table>
+    	</div>
+</div>

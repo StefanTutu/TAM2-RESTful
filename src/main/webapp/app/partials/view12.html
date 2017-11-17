@@ -1,0 +1,62 @@
+<div data-ng-controller="view12Controller">
+		<div id="container">
+    		<div id="header">
+    			<p>Team Selected:  {{teamsSelected[0].teamId}}</p>
+    		</div>
+    		
+    		<div id="menu" style="float:left;">
+    			<div id="listDiv" class="gridTeamsStyle" ng-grid="gridTeams" style="width:790px;"></div>
+    		</div>
+    		<br/>
+    		<br/>
+    		<div>
+    			<a href="#/view11" class="team" data-ng-click="active='team'" style="color:red;" onClick=reload();>Disable editing</a>
+    			<br/>
+    			<br/>
+    		 </div>
+    		 
+    		<div id="content1">
+    				<table style="width:500px; margin:0 auto;" cellpadding="0" cellspacing="0">
+    					<tr>
+    						<td align="left"><label for="teamId" >Team ID:</label></td>
+					    	<td align="left"><input id="teamId" type="number" 
+					    		ng-model="teamsSelected[0].teamId" style="width: 100%;"/></td>
+    					</tr>
+    						
+    					<tr>
+							<td  align="left"><label for="teamName">Team name:</label></td>
+					    	<td  align="left"><input id="teamName" type="text" 
+					    		ng-model="teamsSelected[0].teamName" style="width: 100%;"/></td> 					
+    					</tr>
+    						
+				
+    					<tr> 
+							<td  align="left"><label for=domain align="left">Team field:</label></td>
+					    	<td  align="left"><input id="domain" type="text" 
+					    		ng-model="teamsSelected[0].domain" style="width: 100%;"/></td>   					
+    					</tr>
+    					
+    					<tr> 
+							<td  align="left"><label for=competence align="left">Compentece:</label></td>
+					    	<td  align="left"><input id="competence" type="text" 
+					    		ng-model="teamsSelected[0].competence" style="width: 100%;"/></td>   					
+    					</tr>
+    					
+    				
+						<tr> 
+							<td colspan="2" align="right">
+								<button data-ng-click="add()" >Add new</button>
+								<button data-ng-click="save()" onClick=reload();>Save</button>
+								<button data-ng-click="remove()" onClick=reload();>Delete</button>
+								<button data-ng-click="cancel()" onClick=reload();>Cancel</button>
+							</td> 					
+    					</tr>    					
+					 </table>
+    		</div>
+    		
+			<div id="footer">
+    				<a href="{{teamsSelected[0].link.href}}" target="_blank" style="color:red;">Database link to this team...</a>
+    		</div>    		
+    	</div>	
+	
+</div>

@@ -1,0 +1,73 @@
+<div data-ng-controller="view4Controller">
+<div id="containerF">
+    		<div id="header">
+    			<p>Software selected: {{softwaresSelected[0].name}}</p>
+    		</div>
+   
+   				<table style="width:500px;" cellpadding="1" cellspacing="1" align="left">
+   				
+   					<tr>
+    						<td align="left"><label for="applicationId" >Software Number:</label></td>
+					    	<td align="left"><input id="applicationIdV4" type="number" 
+					    		ng-model="softwaresSelected[0].applicationId" style="width: 100%;"/></td>
+    					</tr>
+    						
+    					<tr>
+							<td  align="left"><label for="applicationName">Name:</label></td>
+					    	<td  align="left"><input id="applicationNameV4" type="text" 
+					    		ng-model="softwaresSelected[0].applicationName" style="width: 100%;"/></td> 					
+    					</tr>
+    						
+    					<tr> 
+							<td  align="left"><label for="devStage" align="left">Development stage:</label></td>
+							<td  align="left"><input id="devStageV4" type="text" 
+					    		ng-model="softwaresSelected[0].devStage" style="width: 100%;"/></td>   
+				
+    					</tr>
+    					
+    					<tr> 
+							<td  align="left"><label for=releaseDate align="left">Release date:</label></td>
+					    	<td  align="left"><input id="releaseDateV4" type="date" 
+					    		ng-model="softwaresSelected[0].releaseDate" style="width: 100%;"/></td>   					
+    					</tr>
+    					
+    					<tr> 
+							<td  align="left"><label for=domain align="left">Domain:</label></td>
+					    	<td  align="left"><input id="domainV4" type="text" 
+					    		ng-model="softwaresSelected[0].domain" style="width: 100%;"/></td>   					
+    					</tr>
+    					
+    					<tr> 
+							<td  align="left"><label for=type align="left">Type:</label></td>
+					    	<td  align="left"><input id="typeV4" type="text" 
+					    		ng-model="softwaresSelected[0].type" style="width: 100%;"/></td>   					
+    					</tr>
+    					
+    					<tr> 
+							<td  align="left"><label for=requirements align="left">Requirements:</label></td>
+					    	<td  align="left"><input id="requirementsV4" type="text" 
+					    		ng-model="softwaresSelected[0].requirements" style="width: 100%;"/></td>   					
+    					</tr>
+   					
+   					
+   					
+   					<tr> 
+   						<td  align="left"><a href="{{software.link.href}}" target="_blank"  style="width: 100%;color:red;">Database link to software</a></td>
+   						<td  align="left">
+   							<button data-ng-click="save();go('/view1')"  style="width: 100%;color:red;">Save</button>
+   							<button data-ng-click="go('/view1');"  style="width: 100%; color:red;">Back to software</button>
+   						</td> 
+   					</tr>
+   					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					<tr>
+   						<td colspan="2">
+   							<div id="listDiv" class="gridReleasesStyle" ng-grid="detailGrid2" style="width:800px;"></div>
+   						</td>
+   					</tr>
+				 </table>
+    	</div>
+</div>

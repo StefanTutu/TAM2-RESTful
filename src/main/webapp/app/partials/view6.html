@@ -1,0 +1,55 @@
+<div data-ng-controller="view6Controller">
+		<div id="container">
+    		<div id="header">
+    			<p>Future release selected:  {{futureReleasesSelected[0].releaseId}}</p>
+    		</div>
+    		
+    		<div id="menu" style="float:left;">
+    			<div id="listDiv" class="gridFutureReleasesStyle" ng-grid="gridFutureReleases" style="width:790px;"></div>
+    		</div>
+    		<br/>
+    		<br/>
+    		<div>
+    			<a href="#/view5" class="futureReleasesList" data-ng-click="active='softwareFutureRel'" onClick=reload(); style="color:red;">Disable editing</a>
+    			<br/>
+    			<br/>
+    		 </div>
+    		 
+    		<div id="content2">
+    				<table style="width:500px; margin:0 auto;" cellpadding="0" cellspacing="0">
+    					<tr>
+    						<td align="left"><label for="releaseIdV6" >Future release no.:</label></td>
+					    	<td align="left"><input id="releaseIdV6" type="number" 
+					    		ng-model="futureReleasesSelected[0].releaseId" style="width: 100%;"/></td>
+    					</tr>
+    						
+    					<tr>
+							<td  align="left"><label for="estimatedDateV6">Estimated release date:</label></td>
+					    	<td  align="left"><input id="estimatedDateV6" type="date" 
+					    		ng-model="futureReleasesSelected[0].estimatedDate" style="width: 100%;"/></td> 					
+    					</tr>
+    						
+    					
+    					<tr> 
+							<td  align="left"><label for=type align="left">Release type:</label></td>
+					    	<td  align="left"><input id="releaseDateV1" type="text" 
+					    		ng-model="futureReleasesSelected[0].type" style="width: 100%;"/></td>   					
+    					</tr>
+    					  					
+						<tr> 
+							<td colspan="2" align="right">
+								<button data-ng-click="add()">Add new</button>
+								<button data-ng-click="save()" onClick=reload();>Save</button>
+								<button data-ng-click="remove()" onClick=reload();>Delete</button>
+								<button data-ng-click="cancel()" onClick=reload();>Cancel</button>
+							</td> 					
+    					</tr>    					
+					 </table>
+    		</div>
+    		
+			<div id="footer">
+    				<a href="{{futureReleasesSelected[0].link.href}}" target="_blank" style="color:red;">Database link to this future release...</a>
+    		</div>    		
+    	</div>	
+	
+</div>

@@ -1,0 +1,58 @@
+<div data-ng-controller="view13Controller">
+<div id="containerF">
+    		<div id="header">
+    			<p>Team selected: {{teamsSelected[0].teamName}}</p>
+    		</div>
+   
+   				<table style="width:500px;" cellpadding="1" cellspacing="1" align="left">
+   				
+   					<tr>
+    						<td align="left"><label for="teamId" >Team ID:</label></td>
+					    	<td align="left"><input id="teamId" type="number" 
+					    		ng-model="teamsSelected[0].teamId" style="width: 100%;"/></td>
+    					</tr>
+    						
+    					<tr>
+							<td  align="left"><label for="teamName">Team name:</label></td>
+					    	<td  align="left"><input id="teamName" type="text" 
+					    		ng-model="teamsSelected[0].teamName" style="width: 100%;"/></td> 					
+    					</tr>
+    						
+				
+    					<tr> 
+							<td  align="left"><label for=domain align="left">Team field:</label></td>
+					    	<td  align="left"><input id="domain" type="text" 
+					    		ng-model="teamsSelected[0].domain" style="width: 100%;"/></td>   					
+    					</tr>
+    					
+    					<tr> 
+							<td  align="left"><label for=competence align="left">Compentece:</label></td>
+					    	<td  align="left"><input id="competence" type="text" 
+					    		ng-model="teamsSelected[0].competence" style="width: 100%;"/></td>   					
+    					</tr>
+   					
+   					
+   					
+   					<tr> 
+   						<td  align="left"><a href="{{team.link.href}}" target="_blank"  style="width: 100%;color:red;">Database link to team</a></td>
+   						<td  align="left">
+   							<button data-ng-click="save();go('/view11')"  style="width: 100%; color:red;" >Save</button>
+   							<button data-ng-click="go('/view11');"  onClick=reload(); style="width: 100%; color:red;">Back to teams</button>
+   						</td>  
+   					</tr>
+   					
+					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					<tr></tr>
+   					
+   					<tr>
+   						<td colspan="2">
+   							<div id="listDiv" class="gridFeaturesStyle" ng-grid="detailTeams" style="width:750px;"></div>
+   						</td>
+   					</tr>
+   					
+				 </table>
+    	</div>
+</div>
